@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static humanize i18n %}
+<title>{% block title %}Home | VGR - Blog Tutorial{% endblock title %}</title>
+{% block content %}
+<header class="container mt-4">
+	<div class="jumbotron text-center">
+	<h1 class="display-4">Hey, I'm Vicente!</h1>
+	<p class="lead">Here's a blog tutorial in Django using the Cookiecutter-Django framework for jump starting a production-ready Django project.</p>
+	<hr class="my-4">
+	<p>Let's take this one step at a time, okay?</p>
+	<a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Learn more</a>
+	</div>
+</header>
+<section class="container">
+	<div class="row row-cols-1 row-cols-md-2">
+		{% for post in posts %}
+			<div class="col mb-4">
+				<div class="card h-100 bg-light">
+					<div class="card-body bg-dark">
+						<h3 class="card-title text-center">
+							<a href="{% url 'blog-detail' post.slug %}">{{ post.title }}</a></h3>
+							<img style="height: 200px; width: 100%; display: block;" src="{{ post.image.url }}" class="card-img-top" alt="...">
+						<p class="card-text text-center p-3">{{ post.overview }}</p>
+					</div>
+					<div class="card-footer text-center">
+						<small class="text-muted">{{ post.created_on }}</small><br />
+						{% for category in post.categories.all %}
+								<span class="p-2">
+									<a href="{% url 'categories' category.slug %}">
+										#{{ category.title }}
+									</a>
+								</span>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+  </div>
+</section>
+{% endblock content %}

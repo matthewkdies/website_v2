@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static humanize i18n %}
+<title>{% block title %}About | VGR - Blog Tutorial{% endblock title %}</title>
+{% block content %}
+<section class="container py-4">
+	<h1 class="text-center mb-4 text-dark">About me</h1>
+	<div class="card mb-3 bg-light">
+		<img src="{% static 'images/cole-searching.png' %}" class="mx-auto py-3 img-fluid rounded-circle w-25" alt="...">
+		<div class="card-body bg-dark">
+			<div class="text-center">
+				<span class="card-text"><a href="https://linkedin.com/in/vicentereyes0888">LinkedIn</a></span>
+				<span class="card-text"><a href="https://twitter.com/highcenburg">Twitter</a></span>
+				<span class="card-text"><a href="https://vgreyes.com">Website</a></span>
+			</div>
+			<div class="text-center py-2 mt-5">
+				<p class="card-text">Organic tattooed marfa taiyaki. Roof party poutine vape chicharrones tilde mlkshk 8-bit gentrify YOLO shabby chic ramps wolf four loko. Austin subway tile mumblecore, vaporware heirloom coloring book cred hella jean shorts listicle master cleanse godard pour-over literally. Street art kombucha twee man braid. Kitsch pop-up glossier, pug vexillologist literally messenger bag fanny pack whatever biodiesel yuccie etsy put a bird on it. Intelligentsia green juice dreamcatcher direct trade. Sriracha bespoke art party hella meditation everyday carry tumeric live-edge street art.</p>
+				<p class="card-text">Deep v butcher sriracha fingerstache DIY literally. Authentic prism you probably haven't heard of them umami tote bag lumbersexual, meh chia man bun post-ironic hella disrupt. Cardigan locavore sartorial beard biodiesel quinoa flexitarian austin chicharrones. Cold-pressed man bun bicycle rights, poke beard roof party edison bulb readymade. Leggings bicycle rights woke, forage biodiesel succulents seitan poke marfa cold-pressed.</p>
+				<p class="card-text">Deep v butcher sriracha fingerstache DIY literally. Authentic prism you probably haven't heard of them umami tote bag lumbersexual, meh chia man bun post-ironic hella disrupt. Cardigan locavore sartorial beard biodiesel quinoa flexitarian austin chicharrones. Cold-pressed man bun bicycle rights, poke beard roof party edison bulb readymade. Leggings bicycle rights woke, forage biodiesel succulents seitan poke marfa cold-pressed.</p>
+				<p class="card-text">Pug church-key keytar enamel pin, tacos beard iPhone mumblecore live-edge humblebrag 90's man bun deep v. Vegan tbh fixie, vape venmo raw denim cred neutra. Single-origin coffee flexitarian bitters, farm-to-table 8-bit typewriter glossier vape meh gastropub church-key tofu distillery mumblecore. Yuccie farm-to-table edison bulb, 90's copper mug etsy keffiyeh kickstarter tote bag. Mustache YOLO cloud bread, you probably haven't heard of them mumblecore succulents adaptogen umami 90's enamel pin fam banh mi chartreuse. Skateboard tilde echo park shoreditch umami.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}
