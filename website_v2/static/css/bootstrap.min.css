@@ -177,13 +177,13 @@ sup {
 }
 
 a {
-	color: #00bc8c;
+	color: #ffdb12;
 	text-decoration: none;
 	background-color: transparent
 }
 
 a:hover {
-	color: #007053;
+	color: #c6aa0f;
 	text-decoration: underline
 }
 
@@ -3129,21 +3129,21 @@ fieldset:disabled a.btn {
 
 .btn-primary {
 	color: #fff;
-	background-color: #375a7f;
-	border-color: #375a7f
+	background-color: #194d33;
+	border-color: #194d33
 }
 
 .btn-primary:hover {
 	color: #fff;
-	background-color: #2b4764;
-	border-color: #28415b
+	background-color: #123725;
+	border-color: #123725
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
 	color: #fff;
-	background-color: #2b4764;
-	border-color: #28415b;
+	background-color: #123725;
+	border-color: #123725;
 	-webkit-box-shadow: 0 0 0 0.2rem rgba(85, 115, 146, 0.5);
 	box-shadow: 0 0 0 0.2rem rgba(85, 115, 146, 0.5)
 }
@@ -3151,16 +3151,16 @@ fieldset:disabled a.btn {
 .btn-primary.disabled,
 .btn-primary:disabled {
 	color: #fff;
-	background-color: #375a7f;
-	border-color: #375a7f
+	background-color: #194d33;
+	border-color: #194d33
 }
 
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 .show>.btn-primary.dropdown-toggle {
 	color: #fff;
-	background-color: #28415b;
-	border-color: #243a53
+	background-color: #123725;
+	border-color: #123725
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -7751,7 +7751,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-	background-color: #375a7f !important
+	background-color: #194d33 !important
 }
 
 a.bg-primary:hover,
@@ -7817,7 +7817,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-	background-color: #adb5bd !important
+	background-color: #8c8c8c !important
 }
 
 a.bg-light:hover,
@@ -11683,7 +11683,8 @@ button.bg-dark:focus {
 }
 
 .text-center {
-	text-align: center !important
+	text-align: center !important;
+	color: white
 }
 
 @media (min-width: 576px) {
@@ -11837,12 +11838,12 @@ a.text-danger:focus {
 }
 
 .text-light {
-	color: #adb5bd !important
+	color: #ffffff !important
 }
 
 a.text-light:hover,
 a.text-light:focus {
-	color: #838f9b !important
+	color: #f1f2f4 !important
 }
 
 .text-dark {
