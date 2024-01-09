@@ -15,22 +15,19 @@
 					{{ project.title }}
 				</a>
 			</h2>
-			<div class="text-center">
+			{% comment %} <div class="text-center">
 				<span class="card-text">
                     <a href="{{ project.live_site }}">
                         View Site
                     </a>
                 </span>
+				<span class="separator"> | </span>
 				<span class="card-text">
-                    <a href="{{ project.github }}">
+                    <a href="{{ project.github_link }}">
                         GitHub
                     </a>
                 </span>
-			</div>
-			<div class="text-center py-2 mt-2">
-				<h2 class="card-title text-center">
-                Project Details
-                </h2>
+			</div> {% endcomment %}
 				<p class="card-text">
 					{{ project.description }}
                 </p>
