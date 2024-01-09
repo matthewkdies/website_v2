@@ -21,7 +21,6 @@
 					<div class="card-body bg-dark">
 						<h3 class="card-title text-center">
 							<a href="{% url 'blog-detail' post.slug %}">{{ post.title }}</a></h3>
-							<img style="height: 200px; width: 100%; display: block;" src="{{ post.image.url }}" class="card-img-top" alt="...">
 						<p class="card-text text-center p-3">{{ post.overview }}</p>
 					</div>
 					<div class="card-footer text-center">
