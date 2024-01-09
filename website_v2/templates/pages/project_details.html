@@ -4,7 +4,7 @@
 {% block content %}
 <section class="container py-5">
 	<h1 class="text-center mb-4 text-dark">
-        Project for {{ project.title }}
+        <b>Project:</b> {{ project.title }}
     </h1>
 	<div class="card mb-4 bg-light">
 		<img src="{{ project.image.url }}" class="mx-3 py-3 img-fluid" style="height:40vh;" alt="...">
@@ -24,7 +24,7 @@
 			</div>
 			<div class="text-center py-2 mt-2">
 				<h2 class="card-title text-center">
-                Project Details
+                Details
                 </h2>
 				<p class="card-text">
                     {{ project.description }}
