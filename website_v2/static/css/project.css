@@ -11,3 +11,42 @@
   background-color: #f2dede;
   border-color: #eed3d7;
 }
+
+@font-face {
+  font-family: 'helvetica-bold';
+  src: url('../fonts/Helvetica-Bold.woff2') format('woff2'),
+       url('../fonts/Helvetica-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'helvetica-italic';
+  src: url('../fonts/Helvetica-Oblique.woff2') format('woff2'),
+       url('../fonts/Helvetica-Oblique.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'helvetica-bold-italic';
+  src: url('../fonts/Helvetica-BoldOblique.woff2') format('woff2'),
+       url('../fonts/Helvetica-BoldOblique.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'helvetica-light';
+  src: url('../fonts/Helvetica-Light.woff2') format('woff2'),
+       url('../fonts/Helvetica-Light.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'helvetica';
+  src: url('../fonts/Helvetica.woff2') format('woff2'),
+       url('../fonts/Helvetica.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'anaphora-light';
+  src: url('../fonts/Anaphora-Light-trial.woff2') format('woff2'),
+       url('../fonts/Anaphora-Light-trial.woff') format('woff');
+}
