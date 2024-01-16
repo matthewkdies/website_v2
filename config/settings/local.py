@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from .base import *  # noqa
 from .base import env
 
@@ -11,7 +13,7 @@ SECRET_KEY = env(
     default="09AVRpXzhYtWhBn3E107CLNd5TeAz4R5slVdvlooJmyejH7qffkwbP8EdS88ITtF",
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1", Path("/app/secrets/local_ip").read_text()]
 
 # CACHES
 # ------------------------------------------------------------------------------
