@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% load static humanize i18n %}
+{% load markdown_extras %}
+
 <title>{% block title %}Project: {{ project.title }}{% endblock title %}</title>
 {% block content %}
 <section class="container py-4" style="font-family: 'helvetica-light', sans-serif;">

@@ -71,6 +71,7 @@ DJANGO_APPS = [
     "django.forms",
 ]
 THIRD_PARTY_APPS = [
+    "markdown",
     "crispy_forms",
     "crispy_bootstrap5",
     "allauth",
@@ -80,6 +81,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     # Your stuff: custom apps go here
+    "website_v2",
     "website_v2.main.apps.MainConfig",
     "website_v2.users.apps.UsersConfig",
 ]
