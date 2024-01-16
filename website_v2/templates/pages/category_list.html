@@ -2,9 +2,9 @@
 {% load static humanize i18n %}
 <title>{% block title %}Category: {{ category.title }}{% endblock title %}</title>
 {% block content %}
-<section class="container">
+<section class="container" style="font-family: 'helvetica-light', sans-serif;">
 	<article>
-	  <h1 class="text-center mt-5 mb-5 text-dark">Category: {{ category | title }}</h1>
+	  <h1 class="text-center mt-5 mb-5 text-dark" style="font-family: 'helvetica-bold', sans-serif;">Category: {{ category | title }}</h1>
 	  <div class="row row-cols-1 row-cols-md-3">
 	    {% for post in posts %}
 	    <div class="col mb-4 text-center">

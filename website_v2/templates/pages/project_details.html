@@ -2,8 +2,8 @@
 {% load static humanize i18n %}
 <title>{% block title %}Project: {{ project.title }}{% endblock title %}</title>
 {% block content %}
-<section class="container py-4">
-	<h1 class="text-center mb-4 text-dark">
+<section class="container py-4" style="font-family: 'helvetica-light', sans-serif;">
+	<h1 class="text-center mb-4 text-dark" style="font-family: 'helvetica', sans-serif;">
         <b>Project:</b> {{ project.title }}
     </h1>
 	<div class="card mb-4 bg-light">
@@ -16,7 +16,7 @@
                     </a>
                 </span> {% endcomment %}
 			<div class="text-center">
-				<h2 class="card-title text-center">
+				<h2 class="card-title text-center" style="font-family: 'helvetica', sans-serif;">
                 Details
                 </h2>
 				<p class="card-text">

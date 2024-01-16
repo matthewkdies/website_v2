@@ -3,16 +3,16 @@
 {% load crispy_forms_tags %}
 <title>{% block title %}Contact{% endblock title %}</title>
 {% block content %}
-<section class="h-100 my-4 pb-5">
+<section class="h-100 my-4 pb-5" style="font-family: 'helvetica-light', sans-serif;">
 	<header class="container text-center">
-		<h1 class="mt-5 text-dark">Want to reach me? Send me a message!</h1>
+		<h1 class="mt-5 text-dark" style="font-family: 'helvetica', sans-serif;">Want to reach me? Send me a message!</h1>
 		<img src="{% static 'images/cole-message-sent.png' %}" class="mx-auto py-3 img-fluid rounded-circle w-25" alt="...">
 	</header>
 	<div class="py-5 mb-1">
     {% if messages %}
 
     {% else %}
-		<div>
+		<div style="font-weight: bold; color: #000">
 			{% csrf_token %}
 			{% crispy form %}
 		</div>
