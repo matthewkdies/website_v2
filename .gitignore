@@ -278,3 +278,4 @@ website_v2/media/
 .env
 .envs/*
 !.envs/.local/
+secrets
