@@ -111,11 +111,11 @@ class TestProjectDetailView(TestCase):
             )
 
     def test_if_url_exist(self):
-        response = self.client.get('/portfolio/learnetto/')
+        response = self.client.get('/projects/learnetto/')
         self.assertEquals(response.status_code, 200)
 
     def test_if_view_uses_right_template(self):
-        response = self.client.get('/portfolio/learnetto/')
+        response = self.client.get('/projects/learnetto/')
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'pages/project_details.html')
 
@@ -136,27 +136,27 @@ class TestProjectListView(TestCase):
                 )
 
     def test_if_url_exist(self):
-        response = self.client.get('/portfolio/')
+        response = self.client.get('/projects/')
         self.assertEquals(response.status_code, 200)
 
     def test_if_view_accessible_by_name(self):
-        response = self.client.get(reverse('portfolio'))
+        response = self.client.get(reverse('projects'))
         self.assertEquals(response.status_code, 200)
 
     def test_if_view_uses_right_template(self):
-        response = self.client.get(reverse('portfolio'))
+        response = self.client.get(reverse('projects'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'pages/projects.html')
 
     def test_if_pagination_is_five(self):
-        response = self.client.get(reverse('portfolio'))
+        response = self.client.get(reverse('projects'))
         self.assertEquals(response.status_code, 200)
         self.assertTrue('is_paginated' in response.context)
         self.assertTrue(response.context['is_paginated'] == True)
         self.assertTrue(len(response.context['projects']) == 5)
 
     def test_list_all_projects(self):
-        response = self.client.get(reverse('portfolio')+'?page=2')
+        response = self.client.get(reverse('projects')+'?page=2')
         self.assertEquals(response.status_code, 200)
         self.assertTrue('is_paginated' in response.context)
         self.assertTrue(response.context['is_paginated'] == True)

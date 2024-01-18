@@ -25,8 +25,8 @@ urlpatterns = [
     # Your stuff: custom urls includes go here
     path("blog/<slug:slug>/", BlogDetailView.as_view(), name="blog-detail"),
     path("blog/category/<slug:category>/", blog_category, name='categories'),
-    path("portfolio/", ProjectListView.as_view(), name="portfolio"),
-    path("portfolio/<slug:slug>", ProjectDetailView.as_view(), name="project-details"),
+    path("projects/", ProjectListView.as_view(), name="projects"),
+    path("projects/<slug:slug>", ProjectDetailView.as_view(), name="project-details"),
     # path("contact/", ContactFormView.as_view(), name="contact"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

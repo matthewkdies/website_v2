@@ -14,8 +14,8 @@
                     <li {% if request.resolver_match.url_name == 'about' %}class="nav-item active"{% else %}class="nav-item"{% endif %}>
                         <a class="nav-link" href="{% url 'about' %}">About</a>
                     </li>
-                    <li {% if request.resolver_match.url_name == 'portfolio' %}class="nav-item active"{% else %}class="nav-item"{% endif %}>
-                        <a class="nav-link" href="{% url 'portfolio' %}">Projects</a>
+                    <li {% if request.resolver_match.url_name == 'projects' %}class="nav-item active"{% else %}class="nav-item"{% endif %}>
+                        <a class="nav-link" href="{% url 'projects' %}">Projects</a>
                     </li>
                     {% comment %} <li {% if request.resolver_match.url_name == 'contact' %}class="nav-item active"{% else %}class="nav-item"{% endif %}>
                         <a class="nav-link" href="{% url 'contact' %}">Contact</a>

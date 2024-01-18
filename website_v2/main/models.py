@@ -10,7 +10,7 @@ STATUS_CHOICES = [
 
 class Project(models.Model):
 	""" This model defines our Project class which will
-		handles the portfolio of the user.
+		handles the projects of the user.
 	"""
 	title = models.CharField(max_length=100)
 	slug = models.SlugField(max_length=140, default=title)
