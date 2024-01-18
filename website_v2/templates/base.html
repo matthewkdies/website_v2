@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}VGR - Blog Tutorial{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, height-device-height, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -15,33 +15,69 @@
     <link rel="stylesheet" href="{% static 'css/project.css' %}">
     <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
 
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0; /* Remove default body margin */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container-fluid {
+            flex: 1;
+            overflow-y: auto;;
+        }
+    </style>
+
     {% block css %}
-
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
     {% endblock %}
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          adjustContainerPadding();
+      });
+
+      window.addEventListener('resize', function() {
+          adjustContainerPadding();
+      });
+
+      function adjustContainerPadding() {
+          var navbarHeight = document.querySelector('.navbar').offsetHeight;
+          var footerHeight = document.querySelector('.footer').offsetHeight;
+
+          var container = document.querySelector('.container-fluid');
+          container.style.paddingTop = navbarHeight + 'px';
+          container.style.paddingBottom = footerHeight + 'px';
+      }
+  </script>
 
   </head>
 
   <body>
-    {% include 'partials/_navbar.html' %}
-    <div class="container">
+    <header class="header fixed-top">
+      {% include 'partials/_navbar.html' %}
+    </header>  
+    <div class="container-fluid">
       {% if messages %}
           {% for message in messages %}
               <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
           {% endfor %}
       {% endif %}
+      {% block content %}{% endblock content %}
+    </div>
 
-      {% block content %}
-
-      {% endblock content %}
-
-    </div> <!-- /container -->
+    <footer class="footer fixed-bottom">
+      {% include 'partials/_footer.html' %}
+    </footer>
+  
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     {% block modal %}{% endblock modal %}
-    {% include 'partials/_footer.html' %}
     {% block javascript %}
 
       <script src="{% static 'js/project.js' %}"></script>
