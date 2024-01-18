@@ -27,7 +27,7 @@ urlpatterns = [
     path("blog/category/<slug:category>/", blog_category, name='categories'),
     path("portfolio/", ProjectListView.as_view(), name="portfolio"),
     path("portfolio/<slug:slug>", ProjectDetailView.as_view(), name="project-details"),
-    path("contact/", ContactFormView.as_view(), name="contact"),
+    # path("contact/", ContactFormView.as_view(), name="contact"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
